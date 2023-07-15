@@ -17,5 +17,5 @@ def recurse(subreddit, hot_list=[], after=None):
         hot_articles = json_res['data'].get('children')
         [hot_list.append(article['data'].get('title')) for article in hot_articles]
 
-        return recurse(subreddit, hot_list, after=after) if has_next else hot_list
-
+        return recurse(subreddit, hot_list, after=after) 
+            if has_next else hot_list
